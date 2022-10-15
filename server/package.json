@@ -1,0 +1,15 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon --ext js,graphql --ignore data/ src/index.js"
+    },
+    "dependencies": {
+        "@apollo/server": "^4.0.0",
+        "fakebase": "^0.3.0",
+        "graphql": "^16.6.0",
+        "nodemon": "^2.0.20"
+    }
+}
