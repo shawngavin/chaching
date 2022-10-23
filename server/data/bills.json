@@ -1,0 +1,16 @@
+[
+  {
+    "id": "8db39c1a-b882-4958-a992-b84e4b02f8c8",
+    "name": "Shawn's Wells Fargo",
+    "balance": 15500,
+    "minimumDue": 120,
+    "dueDay": 22,
+    "creditLimit": 18500,
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": "OTHER",
+    "accountNumber": null,
+    "billType": "CREDIT",
+    "billerId": "e0403a48-c597-40f4-a5d9-dc77763c8d7a"
+  }
+]

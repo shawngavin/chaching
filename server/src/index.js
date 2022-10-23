@@ -21,6 +21,7 @@ const server = new ApolloServer({
 
 const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
+    context: async ({ req, res }) => ({}),
 })
 
 console.log(`🚀  Server ready at: ${url}graphql`)

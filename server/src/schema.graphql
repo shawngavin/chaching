@@ -1,8 +1,96 @@
-type Book {
-    title: String
-    author: String
+type Query {
+    billers: [Biller]!
+    bills: [Bill]!
+    billTypes: [String]!
+    autoPayTypes: [String]!
+    billEditLists: BillEditLists!
 }
 
-type Query {
-    books: [Book]
+type Mutation {
+    addBiller(input: AddBillerInput!): Biller!
+    updateBiller(input: BillerUpdateInput): Biller!
+    deleteBiller(id: ID!): Biller!
+    addBill(input: AddBillInput): Bill!
+    updateBill(input: UpdateBillInput): Bill!
+    deleteBill(id: ID!): Bill!
+}
+
+type Biller {
+    id: ID!
+    name: String!
+    website: String
+}
+
+input AddBillerInput {
+    name: String!
+    website: String
+}
+
+input BillerUpdateInput {
+    id: ID!
+    name: String!
+    website: String
+}
+
+input AddBillInput {
+    name: String!
+    balance: Float!
+    minimumDue: Float
+    dueDay: Int
+    creditLimit: Float
+    userId: ID
+    autoPay: Boolean!
+    autoPayType: String
+    accountNumber: String
+    billType: String!
+    billerId: ID!
+}
+
+input UpdateBillInput {
+    id: ID!
+    name: String!
+    balance: Float!
+    minimumDue: Float
+    dueDay: Int
+    creditLimit: Float
+    userId: ID
+    autoPay: Boolean!
+    autoPayType: String
+    accountNumber: String
+    billerId: ID!
+    billType: String!
+}
+
+type Bill {
+    id: ID!
+    name: String!
+    balance: Float!
+    minimumDue: Float
+    dueDay: Int
+    creditLimit: Float
+    userId: ID
+    autoPay: Boolean!
+    autoPayType: String
+    accountNumber: String
+    billerId: ID!
+    biller: Biller!
+    billType: String
+}
+
+type BillEditLists {
+    autoPayTypes: [String]!
+    billTypes: [String]!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+type income {
+    id: ID!
+    name: String!
+    cycle: Int
+    amount: Float!
+    userId: ID!
 }

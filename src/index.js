@@ -11,7 +11,9 @@ import "primeflex/primeflex.css"
 import "primeicons/primeicons.css"
 import "primereact/resources/themes/mdc-light-deeppurple/theme.css" //icons
 
-const cache = new InMemoryCache()
+const cache = new InMemoryCache({
+    addTypename: false,
+})
 
 const client = new ApolloClient({
     uri: "http://localhost:4000",

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "2149d5b2-9d61-4fbe-a263-073c7a2a8218",
+    "name": "Lowes",
+    "website": "https://lowes.syf.com/login/"
+  },
+  {
+    "id": "ee1a2a5d-c847-4b3f-92d4-b5a2f73631f3",
+    "name": "Target",
+    "website": "https://rcam.target.com/Secure"
+  },
+  {
+    "id": "4590c97e-210a-4fdd-beb2-f4a91c0d4053",
+    "name": "Home Depot",
+    "website": "www.homie.com"
+  },
+  {
+    "id": "e0403a48-c597-40f4-a5d9-dc77763c8d7a",
+    "name": "Wells Fargo",
+    "website": ""
+  },
+  {
+    "id": "35c0aedd-3ac2-43cf-9f70-69b0dd546e3c",
+    "name": "Sams Club",
+    "website": "https://samsclub.syf.com/login/"
+  },
+  {
+    "id": "3934f137-b3bb-44b8-898a-7a1892b69fd6",
+    "name": "Haverty's",
+    "website": "https://www.mysynchrony.com/cmp-index.html?market=homefurnishings&store=havertys"
+  },
+  {
+    "id": "416f17ac-1a24-4f7e-b1d0-c56a0919755c",
+    "name": "Belk",
+    "website": "https://belk.syf.com/"
+  },
+  {
+    "id": "68b162b2-2234-4167-8e56-25418c392bfa",
+    "name": "Kohls",
+    "website": "https://credit.kohls.com/eCustService/"
+  },
+  {
+    "id": "6abcaebc-7166-4f85-9559-6cf744c909d4",
+    "name": "Amazon",
+    "website": "https://amazon.syf.com/login/"
+  },
+  {
+    "id": "f26dfb02-261e-4ad3-b2b2-2513d832f6ae",
+    "name": "TJ Max",
+    "website": "https://tjx.syf.com/login/"
+  },
+  {
+    "id": "dc0ee261-d5cc-421c-9fb6-87673eb48e23",
+    "name": "Care Credit",
+    "website": "https://www.mysynchrony.com/"
+  },
+  {
+    "id": "60469166-1369-456a-9370-cc79ee69efeb",
+    "name": "Duke Energy",
+    "website": "https://www.duke-energy.com/home"
+  },
+  {
+    "id": "b34e8c11-bec3-49c4-b6a8-302cb3e0fe69",
+    "name": "Piedmont Gas",
+    "website": "https://cass.piedmontng.com/account"
+  },
+  {
+    "id": "a0e993f5-f16e-4575-98a8-d88f8e43a815",
+    "name": "Charlotte Water",
+    "website": "https://mycitizenservices.org/#/opening"
+  },
+  {
+    "id": "e39e3bd5-6b15-42de-8182-995e94ab43ac",
+    "name": "TD BAnk",
+    "website": "https://www.tdautofinance.com/app/index.html#!manageaccount"
+  },
+  {
+    "id": "34ce8819-56da-48af-ba55-f4fa136f3899",
+    "name": "Truist",
+    "website": "https://www.truist.com/loans/auto-loans"
+  },
+  {
+    "id": "9b735fe9-f9f8-4f3e-80b0-79effe51a6b7",
+    "name": "PennyMac",
+    "website": "https://mypennymac.pennymacusa.com/"
+  },
+  {
+    "id": "0caf46d6-4e54-4040-a6e1-4b0ffb281490",
+    "name": "Navient",
+    "website": ""
+  },
+  {
+    "id": "36918db7-213e-44af-a7b6-e90dd1625518",
+    "name": "State Farm",
+    "website": ""
+  },
+  {
+    "id": "40c2db27-9b90-401b-8591-8b4cb65b692e",
+    "name": "Verizon",
+    "website": ""
+  },
+  {
+    "id": "cc720f81-28fe-414e-9405-7a5d6c62201f",
+    "name": "Spectrum",
+    "website": ""
+  },
+  {
+    "id": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+    "name": "Capitol One",
+    "website": ""
+  }
+]

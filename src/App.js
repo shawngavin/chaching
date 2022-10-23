@@ -1,13 +1,17 @@
-import logo from "./logo.svg"
 import "./App.css"
-import { Button, InputText } from "primereact"
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"
 import { Header, Content } from "./components/layout"
+import { getRoutes } from "./navigation/routes"
+
+const router = createBrowserRouter(getRoutes())
 
 function App() {
     return (
-        <div className='App'>
+        <div className='app'>
             <Header />
-            <Content />
+            <Content>
+                <RouterProvider router={router}></RouterProvider>
+            </Content>
         </div>
     )
 }
