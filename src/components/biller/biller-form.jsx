@@ -1,102 +1,77 @@
-import { useState } from "react"
-import { useMutation, useReactiveVar } from "@apollo/client"
-import { useForm } from "react-hook-form"
-import { dialogVisibleVar, selectedVar } from "../../local-store"
-import { Button } from "primereact"
-import { TextInput } from "../form"
-import { GET_BILLERS, ADD_BILLER, UPDATE_BILLER } from "../../graphql"
-import smallCheckers from "../../assets/tiny-checkers.png"
-import { useEffect } from "react"
+import { useState } from 'react'
+import { useMutation, useReactiveVar } from '@apollo/client'
+import { useForm } from 'react-hook-form'
+import { dialogVisibleVar, selectedVar } from '../../local-store'
+import { Button } from 'primereact'
+import { TextInput } from '../form'
+import { GET_BILLERS, ADD_BILLER, UPDATE_BILLER } from '../../graphql'
+import smallCheckers from '../../assets/tiny-checkers.png'
+import { useEffect } from 'react'
 
 export const BillerForm = () => {
-    const [error, setError] = useState()
-    const selected = useReactiveVar(selectedVar)
-    const billerDialogVisible = useReactiveVar(dialogVisibleVar)
-    const [
-        addBiller,
-        {
-            data,
-            error: addBillerError,
-            loading: addBillerLoading,
-            reset: resetAddBiller,
-        },
-    ] = useMutation(ADD_BILLER, {
-        refetchQueries: [{ query: GET_BILLERS }],
-    })
-    const [
-        updateBiller,
-        {
-            data: updateBillerData,
-            updateBillerError,
-            updateBillerLoading,
-            reset: updateBillerReset,
-        },
-    ] = useMutation(UPDATE_BILLER, {
-        refetchQueries: [{ query: GET_BILLERS }],
-    })
+  const [error, setError] = useState()
+  const selected = useReactiveVar(selectedVar)
+  const billerDialogVisible = useReactiveVar(dialogVisibleVar)
+  const [addBiller, { data, error: addBillerError, loading: addBillerLoading, reset: resetAddBiller }] = useMutation(ADD_BILLER, {
+    refetchQueries: [{ query: GET_BILLERS }],
+  })
+  const [updateBiller, { data: updateBillerData, updateBillerError, updateBillerLoading, reset: updateBillerReset }] = useMutation(UPDATE_BILLER, {
+    refetchQueries: [{ query: GET_BILLERS }],
+  })
 
-    const defaultValues = selected
-        ? selected
-        : {
-              name: "",
-              website: "",
-          }
+  const defaultValues = selected
+    ? selected
+    : {
+        name: '',
+        website: '',
+      }
 
-    const {
-        control,
-        formState: { errors },
-        handleSubmit,
-        reset,
-    } = useForm({ defaultValues })
+  const {
+    control,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({ defaultValues })
 
-    useEffect(() => {
-        setError(addBillerError || updateBillerError)
-    }, [addBillerError, updateBillerError])
+  useEffect(() => {
+    setError(addBillerError || updateBillerError)
+  }, [addBillerError, updateBillerError])
 
-    const onSubmit = data => {
-        console.log("submit", data)
-        if (data.id) {
-            updateBiller({ variables: { input: data } })
-        } else {
-            addBiller({ variables: { input: data } })
-        }
-        dialogVisibleVar(false)
+  const onSubmit = data => {
+    console.log('submit', data)
+    if (data.id) {
+      updateBiller({ variables: { input: data }, onCompleted: data => dialogVisibleVar(false) })
+    } else {
+      addBiller({ variables: { input: data }, onCompleted: data => dialogVisibleVar(false) })
     }
+  }
 
-    if (error)
-        return (
-            <div
-                className='p-card  text-center surface-600 bg-purple-50'
-                style={{
-                    backgroundImage: `url(${smallCheckers})`,
-                    padding: 25,
-                    paddingBottom: 0,
-                }}
-            >
-                <h3>Error!</h3>
-                <p style={{ width: 400 }}>{error.message}</p>
-                <Button onClick={() => resetAddBiller()}>Try Again</Button>
-            </div>
-        )
-
+  if (error)
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <TextInput
-                name='name'
-                label='Biller Name'
-                control={control}
-                rules={{ required: "'Biller Name' is required!" }}
-            />
-            <TextInput name='website' label='WebSite' control={control} />
-            <div className='p-dialog-footer pb-0 pt-5 pr-0'>
-                <Button
-                    className='p-button-text'
-                    onClick={() => dialogVisibleVar(false)}
-                >
-                    Cancel
-                </Button>
-                <Button type='submit'>Save</Button>
-            </div>
-        </form>
+      <div
+        className="p-card  text-center surface-600 bg-purple-50"
+        style={{
+          backgroundImage: `url(${smallCheckers})`,
+          padding: 25,
+          paddingBottom: 0,
+        }}
+      >
+        <h3>Error!</h3>
+        <p style={{ width: 400 }}>{error.message}</p>
+        <Button onClick={() => resetAddBiller()}>Try Again</Button>
+      </div>
     )
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <TextInput name="name" label="Biller Name" control={control} rules={{ required: "'Biller Name' is required!" }} />
+      <TextInput name="website" label="WebSite" control={control} />
+      <div className="p-dialog-footer pb-0 pt-5 pr-0">
+        <Button className="p-button-text" onClick={() => dialogVisibleVar(false)}>
+          Cancel
+        </Button>
+        <Button type="submit">Save</Button>
+      </div>
+    </form>
+  )
 }

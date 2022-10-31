@@ -1,96 +1,121 @@
 type Query {
-    billers: [Biller]!
-    bills: [Bill]!
-    billTypes: [String]!
-    autoPayTypes: [String]!
-    billEditLists: BillEditLists!
+  bills: [Bill]!
+  billTypes: [String]!
+  autoPayTypes: [String]!
+  billEditLists: BillEditLists!
+  billers: [Biller]!
+  paychecks: [Paycheck]!
 }
 
 type Mutation {
-    addBiller(input: AddBillerInput!): Biller!
-    updateBiller(input: BillerUpdateInput): Biller!
-    deleteBiller(id: ID!): Biller!
-    addBill(input: AddBillInput): Bill!
-    updateBill(input: UpdateBillInput): Bill!
-    deleteBill(id: ID!): Bill!
+  addBiller(input: AddBillerInput!): Biller!
+  updateBiller(input: BillerUpdateInput): Biller!
+  deleteBiller(id: ID!): Biller!
+  addBill(input: AddBillInput): Bill!
+  updateBill(input: UpdateBillInput): Bill!
+  deleteBill(id: ID!): Bill!
+  addPaycheck(input: AddPaycheckInput): Paycheck!
+  updatePaycheck(input: UpdatePaycheckInput): Paycheck!
+  deletePaycheck(id: ID!): Paycheck!
+}
+
+type Paycheck {
+  id: ID!
+  employer: String!
+  cycleInDays: String!
+  pay: String!
 }
 
 type Biller {
-    id: ID!
-    name: String!
-    website: String
+  id: ID!
+  name: String!
+  website: String
 }
 
 input AddBillerInput {
-    name: String!
-    website: String
+  name: String!
+  website: String
 }
 
 input BillerUpdateInput {
-    id: ID!
-    name: String!
-    website: String
+  id: ID!
+  name: String!
+  website: String
+}
+
+input AddPaycheckInput {
+  employer: String!
+  cycleInDays: String!
+  pay: String!
+}
+
+input UpdatePaycheckInput {
+  id: ID!
+  employer: String!
+  cycleInDays: String!
+  pay: String!
 }
 
 input AddBillInput {
-    name: String!
-    balance: Float!
-    minimumDue: Float
-    dueDay: Int
-    creditLimit: Float
-    userId: ID
-    autoPay: Boolean!
-    autoPayType: String
-    accountNumber: String
-    billType: String!
-    billerId: ID!
+  name: String!
+  balance: String!
+  minimumDue: String
+  dueDay: String
+  creditLimit: String
+  userId: ID
+  autoPay: Boolean!
+  autoPayType: String
+  accountNumber: String
+  billType: String!
+  billerId: ID!
 }
 
 input UpdateBillInput {
-    id: ID!
-    name: String!
-    balance: Float!
-    minimumDue: Float
-    dueDay: Int
-    creditLimit: Float
-    userId: ID
-    autoPay: Boolean!
-    autoPayType: String
-    accountNumber: String
-    billerId: ID!
-    billType: String!
+  id: ID!
+  name: String!
+  balance: String!
+  minimumDue: String
+  dueDay: String
+  creditLimit: String
+  userId: ID
+  autoPay: Boolean!
+  autoPayType: String
+  accountNumber: String
+  billerId: ID!
+  billType: String!
 }
 
 type Bill {
-    id: ID!
-    name: String!
-    balance: Float!
-    minimumDue: Float
-    dueDay: Int
-    creditLimit: Float
-    userId: ID
-    autoPay: Boolean!
-    autoPayType: String
-    accountNumber: String
-    billerId: ID!
-    biller: Biller!
-    billType: String
+  id: ID!
+  name: String!
+  balance: String!
+  minimumDue: String
+  dueDay: String
+  creditLimit: String
+  userId: ID
+  autoPay: Boolean!
+  autoPayType: String
+  accountNumber: String
+  billerId: ID!
+  biller: Biller!
+  billType: String
 }
 
 type BillEditLists {
-    autoPayTypes: [String]!
-    billTypes: [String]!
+  autoPayTypes: [String]!
+  billTypes: [String]!
+  billers: [Biller]!
 }
 
 type User {
-    id: ID!
-    name: String!
+  id: ID!
+  name: String!
 }
 
 type income {
-    id: ID!
-    name: String!
-    cycle: Int
-    amount: Float!
-    userId: ID!
+  id: ID!
+  name: String!
+  cycle: String
+  amount: String!
+  userId: ID!
 }

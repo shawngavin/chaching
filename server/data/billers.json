@@ -108,5 +108,15 @@
     "id": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
     "name": "Capitol One",
     "website": ""
+  },
+  {
+    "id": "d264e2c0-db92-4471-b107-743df2114a24",
+    "name": "Basset Furniture ",
+    "website": "https://retailservices.wellsfargo.com/customer/index.html"
+  },
+  {
+    "id": "ea16a9c2-d6ae-480b-970a-61285a1ab934",
+    "name": "Best Buy",
+    "website": "https://citiretailservices.citibankonline.com/RSnextgen/svc/launch/index.action?siteId=PLCN_BESTBUY&langId=en_US#signoff"
   }
 ]

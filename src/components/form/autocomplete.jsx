@@ -1,9 +1,9 @@
-import { ToggleButton as PrimeToggleButton } from 'primereact'
+import { AutoComplete as PrimeAutoComplete } from 'primereact'
 import { Controller } from 'react-hook-form'
 import { classNames } from 'primereact/utils'
-import { ErrorIcon } from './error-icon'
+import { ErrorIcon } from './'
 
-export const ToggleButton = ({ name, rules, control, label, helperText }) => {
+export const AutoComplete = ({ name, rules, control, label, helperText, suggestions, completeMethod, ...rest }) => {
   return (
     <Controller
       name={name}
@@ -16,13 +16,12 @@ export const ToggleButton = ({ name, rules, control, label, helperText }) => {
               {label}
             </label>
             <ErrorIcon fieldState={fieldState}>
-              <PrimeToggleButton
-                onIcon="pi pi-check"
-                offIcon="pi pi-times"
+              <PrimeAutoComplete
                 id={field.name}
-                checked={field.value}
-                //onChange={e => (field.value = e.value)}
+                suggestions={suggestions}
+                completeMethod={completeMethod}
                 {...field}
+                {...rest}
                 className={classNames({
                   'p-invalid': fieldState.invalid,
                 })}
