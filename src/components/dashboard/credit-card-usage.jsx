@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery } from '@apollo/client'
-import { GET_BILLS } from '../../graphql'
+import { GET_BILLS_OF_TYPE } from '../../graphql'
 import { currencyTemplate } from '../common'
 
 export const CreditCardUsage = () => {
@@ -9,10 +9,12 @@ export const CreditCardUsage = () => {
     data: billData,
     loading: billLoading,
     error: billError,
-  } = useQuery(GET_BILLS, {
+  } = useQuery(GET_BILLS_OF_TYPE, {
+    variables: { billType: 'Credit Card' },
     fetchPolicy: 'cache-and-network',
     onCompleted: data => {
-      const result = data.bills.reduce(
+      console.log('query', data)
+      const result = data.billsOfType.reduce(
         (acc, cur) => {
           if (cur.balance != '0') {
             acc.totalBalances += parseFloat(cur.balance)

@@ -11,7 +11,7 @@
     "autoPayType": "OTHER",
     "accountNumber": null,
     "billerId": "e0403a48-c597-40f4-a5d9-dc77763c8d7a",
-    "billType": "CREDIT"
+    "billType": "Credit Card"
   },
   {
     "id": "8999794d-2a65-4ab7-8033-be9674f269ec",
@@ -213,5 +213,16 @@
     "autoPay": true,
     "billType": "Credit Card",
     "billerId": "ea16a9c2-d6ae-480b-970a-61285a1ab934"
+  },
+  {
+    "id": "f5b651df-9ee2-4519-a32d-66adf3b3738e",
+    "name": "Mortgage",
+    "balance": "466798.49",
+    "minimumDue": "2815.12",
+    "dueDay": "1",
+    "creditLimit": "",
+    "autoPay": false,
+    "billType": "Mortgage",
+    "billerId": "9b735fe9-f9f8-4f3e-80b0-79effe51a6b7"
   }
 ]

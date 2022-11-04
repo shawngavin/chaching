@@ -7,6 +7,7 @@ export const GET_PAYCHECKS = gql`
       employer
       cycleInDays
       pay
+      payPerYear @client
     }
   }
 `

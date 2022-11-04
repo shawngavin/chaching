@@ -21,6 +21,31 @@ export const GET_BILLS = gql`
     }
   }
 `
+
+export const GET_BILLS_OF_TYPE = gql`
+  query GetBillsOfType($billType: String!) {
+    billsOfType(billType: $billType) {
+      id
+      name
+      balance
+      minimumDue
+      dueDay
+      creditLimit
+      userId
+      autoPay
+      autoPayType
+      accountNumber
+      billerId
+      biller {
+        id
+        name
+        website
+      }
+      billType
+    }
+  }
+`
+
 export const ADD_BILL = gql`
   mutation AddBill($input: AddBillInput) {
     addBill(input: $input) {

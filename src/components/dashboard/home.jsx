@@ -1,5 +1,4 @@
-import { CreditCardUsage } from '../layout/credit-card-usage'
-import { BalanceChart } from './'
+import { CreditCardUsage, BalanceChart, NetPay } from './'
 
 export const Home = () => {
   return (
@@ -12,6 +11,9 @@ export const Home = () => {
         </div>
         <div className="col-6" style={{ height: 400 }}>
           <BalanceChart />
+        </div>
+        <div className="col-3">
+          <NetPay />
         </div>
       </div>
     </>

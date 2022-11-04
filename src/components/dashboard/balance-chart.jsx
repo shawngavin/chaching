@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useQuery } from '@apollo/client'
-import { GET_BILLS } from '../../graphql'
+import { GET_BILLS_OF_TYPE } from '../../graphql'
 import { colors } from './chart-colors'
 import { Chart } from 'primereact/chart'
 
@@ -10,10 +10,11 @@ export const BalanceChart = () => {
     data: billData,
     loading: billLoading,
     error: billError,
-  } = useQuery(GET_BILLS, {
+  } = useQuery(GET_BILLS_OF_TYPE, {
+    variables: { billType: 'Credit Card' },
     fetchPolicy: 'cache-first',
     onCompleted: data => {
-      const dataSet = data.bills.reduce(
+      const dataSet = data.billsOfType.reduce(
         (acc, value) => {
           if (value.balance != '0') {
             acc.labels.push(value.name)

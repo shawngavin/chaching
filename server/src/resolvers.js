@@ -4,6 +4,10 @@ import { Biller, User, Bill, BillType, AutoPayType, Pay } from './db.js'
 export const resolvers = {
   Query: {
     bills: () => Bill.findAll(),
+    billsOfType: async (_, { billType }) => {
+      const billsOfType = await Bill.findAll()
+      return billsOfType.filter(f => f.billType === billType)
+    },
     billTypes: () => BillType.findAll(),
     autoPayTypes: () => AutoPayType.findAll(),
     billEditLists: () => ({

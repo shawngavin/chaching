@@ -15,9 +15,9 @@ export const Paychecks = () => {
         loading={loading}
         value={data?.paychecks}
         selected={selected}
-        onChange={e => {
-          selectedVar(e.value)
-        }}
+        onSelectionChange={e => selectedVar(e.value)}
+        selectionMode="single"
+        onDoubleClick={() => dialogVisibleVar(true)}
         header={
           <Button
             className="p-button-text"
@@ -32,8 +32,10 @@ export const Paychecks = () => {
         }
       >
         <Column field="employer" header="Employer" sortable></Column>
+        <Column field="cycleInDays" header="Paid every ___ Days" sortable></Column>
+        <Column field="pay" header="Amount Paid" sortable></Column>
       </DataTable>
-      <Dialog title={selected ? `Update biller: ${selected.name}` : 'Add Bill'}>
+      <Dialog title={selected ? `Update biller: ${selected.name}` : 'Add Paycheck'}>
         <PaycheckForm />
       </Dialog>
     </>

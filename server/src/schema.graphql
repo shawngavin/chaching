@@ -1,5 +1,6 @@
 type Query {
   bills: [Bill]!
+  billsOfType(billType: String!): [Bill]!
   billTypes: [String]!
   autoPayTypes: [String]!
   billEditLists: BillEditLists!

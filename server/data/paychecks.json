@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "716701cb-5ff3-492f-ac49-5c468aebd162",
+    "employer": "City of Charlotte",
+    "cycleInDays": "7",
+    "pay": "1318.51"
+  },
+  {
+    "id": "0fb8d636-f3a3-47d6-8cd4-6a0073febff4",
+    "employer": "Atrium Health",
+    "cycleInDays": "14",
+    "pay": "1873.84"
+  }
+]

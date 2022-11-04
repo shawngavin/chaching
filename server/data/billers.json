@@ -118,5 +118,10 @@
     "id": "ea16a9c2-d6ae-480b-970a-61285a1ab934",
     "name": "Best Buy",
     "website": "https://citiretailservices.citibankonline.com/RSnextgen/svc/launch/index.action?siteId=PLCN_BESTBUY&langId=en_US#signoff"
+  },
+  {
+    "id": "ba5c984f-fee8-45d3-874b-9edad8a9dd14",
+    "name": "PENNYMAC",
+    "website": "https://mypennymac.pennymacusa.com/"
   }
 ]
