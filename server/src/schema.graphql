@@ -6,6 +6,7 @@ type Query {
   billEditLists: BillEditLists!
   billers: [Biller]!
   paychecks: [Paycheck]!
+  employers: [Employer]!
 }
 
 type Mutation {
@@ -18,6 +19,32 @@ type Mutation {
   addPaycheck(input: AddPaycheckInput): Paycheck!
   updatePaycheck(input: UpdatePaycheckInput): Paycheck!
   deletePaycheck(id: ID!): Paycheck!
+  addEmployer(input: AddEmployerInput!): Employer
+  updateEmployer(input: UpdateEmployerInput!): Employer
+  deleteEmployer(id: ID!): Employer
+}
+
+type Employer {
+  id: ID!
+  name: String!
+  paychecksPerYear: Int!
+}
+
+input AddEmployerInput {
+  name: String!
+  paychecksPerYear: Int!
+}
+
+input UpdateEmployerInput {
+  id: ID!
+  name: String!
+  paychecksPerYear: Int!
+}
+
+type Reconciled {
+  id: ID!
+  date: String!
+  actual: String!
 }
 
 type Paycheck {
@@ -31,6 +58,7 @@ type Biller {
   id: ID!
   name: String!
   website: String
+  image: String
 }
 
 input AddBillerInput {

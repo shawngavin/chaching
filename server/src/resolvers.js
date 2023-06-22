@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid'
-import { Biller, User, Bill, BillType, AutoPayType, Pay } from './db.js'
+import { Biller, User, Bill, BillType, AutoPayType, Pay, Employer } from './db.js'
 
 export const resolvers = {
   Query: {
@@ -17,6 +17,7 @@ export const resolvers = {
     }),
     billers: () => Biller.findAll(),
     paychecks: () => Pay.findAll(),
+    employers: () => Employer.findAll(),
   },
   Mutation: {
     addBiller: (_, { input }) => {
@@ -57,6 +58,19 @@ export const resolvers = {
       const paycheck = Pay.findById(id)
       await Pay.delete(id)
       return paycheck
+    },
+    addEmployer: async (_, { input }) => {
+      const newEmployer = { ...input, id: uuid() }
+      await Employer.create(newEmployer)
+      return newEmployer
+    },
+    updateEmployer: async (_, { input }) => {
+      return await Employer.update(input)
+    },
+    deleteEmployer: async (_, { id }) => {
+      const employer = Pay.findById(id)
+      await Employer.delete(id)
+      return employer
     },
   },
   Bill: {

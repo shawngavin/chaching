@@ -14,7 +14,7 @@ import 'primereact/resources/themes/mdc-light-deeppurple/theme.css' //icons
 import { readJsonBody } from '@apollo/client/link/http/parseAndCheckHttpResponse'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: 'http://localhost:4000/graphql',
   cache: new InMemoryCache({
     typePolicies: {
       Paycheck: {

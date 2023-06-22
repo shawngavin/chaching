@@ -30,8 +30,11 @@ export const BillerForm = () => {
     control,
     formState: { errors },
     handleSubmit,
+    watch,
     reset,
   } = useForm({ defaultValues })
+
+  console.log('watch', watch())
 
   useEffect(() => {
     setError(addBillerError || updateBillerError)
@@ -40,9 +43,9 @@ export const BillerForm = () => {
   const onSubmit = data => {
     console.log('submit', data)
     if (data.id) {
-      updateBiller({ variables: { input: data }, onCompleted: data => dialogVisibleVar(false) })
+      updateBiller({ variables: { input: { id: data.id, name: data.name, website: data.website } }, onCompleted: data => dialogVisibleVar(false) })
     } else {
-      addBiller({ variables: { input: data }, onCompleted: data => dialogVisibleVar(false) })
+      addBiller({ variables: { input: { name: data.name, website: data.website } }, onCompleted: data => dialogVisibleVar(false) })
     }
   }
 
@@ -63,9 +66,14 @@ export const BillerForm = () => {
     )
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <TextInput name="name" label="Biller Name" control={control} rules={{ required: "'Biller Name' is required!" }} />
-      <TextInput name="website" label="WebSite" control={control} />
+    <form onSubmit={handleSubmit(onSubmit)} className="grid">
+      <div className="col-6">
+        <TextInput name="name" label="Biller Name" control={control} rules={{ required: "'Biller Name' is required!" }} />
+        <TextInput name="website" label="WebSite" control={control} />
+      </div>
+      <div className="col-6">
+        <img src={`/images/${selected.image}`} alt={'image_' + selected.id} />
+      </div>
       <div className="p-dialog-footer pb-0 pt-5 pr-0">
         <Button className="p-button-text" onClick={() => dialogVisibleVar(false)}>
           Cancel

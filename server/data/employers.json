@@ -1,0 +1,17 @@
+[
+  {
+    "id": "716701cb-5ff3-492f-ac49-5c468aebd162",
+    "name": "City of Charlotte",
+    "paychecksPerYear": 52
+  },
+  {
+    "id": "0fb8d636-f3a3-47d6-8cd4-6a0073febff4",
+    "name": "Atrium Health",
+    "paychecksPerYear": 26
+  },
+  {
+    "id": "58165800-a154-458d-842e-f624c90b6459",
+    "name": "Pampered Chef",
+    "paychecksPerYear": 24
+  }
+]

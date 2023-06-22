@@ -16,7 +16,7 @@ body {
 
 .content {
   background: rgb(171, 153, 255);
-  background: linear-gradient(355deg, rgba(171, 153, 255, 1) 0%, rgba(186, 156, 255, 1) 12%, rgba(255, 255, 255, 1) 23%);
+  background: linear-gradient(355deg, rgba(171, 153, 255, 1) 0%, rgb(51, 30, 100) 12%, rgb(237, 233, 250) 23%);
   padding: 15px;
 }
 
