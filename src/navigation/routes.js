@@ -1,4 +1,5 @@
-import { Billers, Bills, Home, Paychecks } from '../components'
+import { Billers, Bills, Home, Paychecks, Employers } from '../components'
+import errorImage from '../assets/error-hamster.jpg'
 export const getRoutes = () => {
   return [
     {
@@ -16,6 +17,16 @@ export const getRoutes = () => {
     {
       path: '/pay',
       element: <Paychecks />,
+    },
+    {
+      path: '/employers',
+      element: <Employers />,
+      errorElement: (
+        <div>
+          <img src={errorImage} alt="errorImage" style={{ width: '50%' }} />
+          <h1>Oh NOES!!!! You've angered the evil Hamster</h1>
+        </div>
+      ),
     },
     {
       path: '/ass',
