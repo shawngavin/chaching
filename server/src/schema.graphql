@@ -87,7 +87,7 @@ input UpdatePaycheckInput {
 
 input AddBillInput {
   name: String!
-  balance: String!
+  balance: BalanceInput
   minimumDue: String
   dueDay: String
   creditLimit: String
@@ -96,13 +96,14 @@ input AddBillInput {
   autoPayType: String
   accountNumber: String
   billType: String!
-  billerId: ID!
+  biller: BillerInput
+  website: String
 }
 
 input UpdateBillInput {
   id: ID!
   name: String!
-  balance: String!
+  balance: BalanceInput
   minimumDue: String
   dueDay: String
   creditLimit: String
@@ -110,14 +111,27 @@ input UpdateBillInput {
   autoPay: Boolean!
   autoPayType: String
   accountNumber: String
-  billerId: ID!
+  # billerId: String
+  biller: BillerInput
   billType: String!
+  website: String
+}
+
+input BalanceInput {
+  amount: String!
+}
+
+input BillerInput {
+  id: ID
+  name: String!
+  website: String
+  image: String
 }
 
 type Bill {
   id: ID!
   name: String!
-  balance: String!
+  balance: Balance
   minimumDue: String
   dueDay: String
   creditLimit: String
@@ -125,9 +139,20 @@ type Bill {
   autoPay: Boolean!
   autoPayType: String
   accountNumber: String
-  billerId: ID!
-  biller: Biller!
+  biller: Biller
   billType: String
+  updated: String
+  website: String
+}
+
+input BalanceInput {
+  amount: String!
+}
+
+type Balance {
+  billId: ID!
+  date: String
+  amount: String
 }
 
 type BillEditLists {

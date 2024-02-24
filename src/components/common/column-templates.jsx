@@ -1,5 +1,13 @@
 export const currencyTemplate = ({ rowData, field }) => {
-  return rowData[field]?.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+  //TODO: See if there is a library that will handle the . split
+  if (field.includes('.')) {
+    const [first, second] = field.split('.')
+    const stuff = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })?.format(rowData[first][second])
+    // console.log('stuff', stuff)
+    return stuff
+  }
+  // console.log('rowData[field]', rowData, field, rowData[field])
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })?.format(rowData[field])
 }
 
 const ordinalSuffixOf = i => {

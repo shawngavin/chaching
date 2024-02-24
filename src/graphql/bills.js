@@ -5,7 +5,10 @@ export const GET_BILLS = gql`
     bills {
       id
       name
-      balance
+      balance {
+        amount
+        date
+      }
       minimumDue
       dueDay
       creditLimit
@@ -14,10 +17,14 @@ export const GET_BILLS = gql`
       autoPayType
       accountNumber
       biller {
+        id
         name
+        image
         website
       }
       billType
+      updated
+      website
     }
   }
 `
@@ -42,6 +49,8 @@ export const GET_BILLS_OF_TYPE = gql`
         website
       }
       billType
+      updated
+      website
     }
   }
 `
@@ -51,7 +60,9 @@ export const ADD_BILL = gql`
     addBill(input: $input) {
       id
       name
-      balance
+      balance {
+        amount
+      }
       minimumDue
       dueDay
       creditLimit
@@ -59,13 +70,13 @@ export const ADD_BILL = gql`
       autoPay
       autoPayType
       accountNumber
-      billerId
       biller {
         id
         name
         website
       }
       billType
+      website
     }
   }
 `
@@ -74,7 +85,6 @@ export const UPDATE_BILL = gql`
     updateBill(input: $input) {
       id
       name
-      balance
       minimumDue
       dueDay
       creditLimit
@@ -82,13 +92,13 @@ export const UPDATE_BILL = gql`
       autoPay
       autoPayType
       accountNumber
-      billerId
       biller {
         id
         name
         website
       }
       billType
+      website
     }
   }
 `

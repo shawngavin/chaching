@@ -12,7 +12,7 @@ export const TextInput = ({ name, rules, control, label, helperText }) => {
       render={({ field, fieldState }) => {
         return (
           <div className="field">
-            <label htmlFor="username1" className="block">
+            <label htmlFor={field.name} className="block">
               {label}
             </label>
             <ErrorIcon fieldState={fieldState}>

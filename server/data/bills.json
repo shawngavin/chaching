@@ -2,112 +2,176 @@
   {
     "id": "8db39c1a-b882-4958-a992-b84e4b02f8c8",
     "name": "Shawn's Wells Fargo",
-    "balance": "15500.00",
     "minimumDue": "120",
     "dueDay": "22",
     "creditLimit": "18500",
     "userId": null,
-    "autoPay": true,
+    "autoPay": false,
     "autoPayType": "OTHER",
-    "accountNumber": null,
+    "accountNumber": "",
+    "billType": "Credit Card",
+    "website": "https://www.wellsfargo.com/",
     "billerId": "e0403a48-c597-40f4-a5d9-dc77763c8d7a",
-    "billType": "Credit Card"
+    "updated": "2024-02-24T20:15:50.036Z",
+    "balance": {
+      "date": "2024-02-24T20:15:50.036Z",
+      "amount": "11313.94"
+    }
   },
   {
     "id": "8999794d-2a65-4ab7-8033-be9674f269ec",
     "name": "Mike's Wells Fargo",
-    "balance": "16004.00",
     "minimumDue": "171.00",
     "dueDay": "22",
     "creditLimit": "20000",
-    "autoPay": true,
-    "billType": "Credit Card",
-    "billerId": "e0403a48-c597-40f4-a5d9-dc77763c8d7a"
-  },
-  {
-    "id": "1cc4917a-cab0-4807-9c45-87448046427b",
-    "name": "Home Depot",
-    "balance": "0",
-    "minimumDue": "0",
-    "dueDay": "6",
-    "creditLimit": "5000",
-    "autoPay": true,
-    "billType": "Credit Card",
-    "billerId": "4590c97e-210a-4fdd-beb2-f4a91c0d4053"
-  },
-  {
-    "id": "4bc80665-7702-476c-9fd2-d78bec9d5ef1",
-    "name": "Lowes",
-    "balance": "2000",
-    "minimumDue": "500",
-    "dueDay": "21",
-    "creditLimit": "35000",
-    "autoPay": true,
-    "billType": "Credit Card",
-    "billerId": "2149d5b2-9d61-4fbe-a263-073c7a2a8218"
-  },
-  {
-    "id": "c4434b6d-b8b5-4909-973b-ead6ac23ebcc",
-    "name": "Sam's Club",
-    "balance": "365",
-    "minimumDue": "365",
-    "dueDay": "23",
-    "creditLimit": "10000",
-    "autoPay": true,
-    "billType": "Credit Card",
-    "billerId": "35c0aedd-3ac2-43cf-9f70-69b0dd546e3c"
-  },
-  {
-    "id": "e710a14b-7494-4885-bd3a-9e2516000e7d",
-    "name": "Mike's Haverty's",
-    "balance": "4185.00",
-    "minimumDue": "148.00",
-    "dueDay": "6",
-    "creditLimit": "12000.00",
-    "autoPay": true,
-    "billType": "Credit Card",
-    "billerId": "3934f137-b3bb-44b8-898a-7a1892b69fd6"
-  },
-  {
-    "id": "78e8736b-f6e7-4d43-a41f-319fcc02d95d",
-    "name": "Shawn's Haverty's",
-    "balance": "1767.28",
-    "minimumDue": "120.00",
-    "dueDay": "19",
-    "creditLimit": "10000.00",
     "userId": null,
     "autoPay": true,
     "autoPayType": null,
     "accountNumber": null,
+    "billType": "Credit Card",
+    "billerId": "e0403a48-c597-40f4-a5d9-dc77763c8d7a",
+    "updated": "2024-02-24T18:56:56.495Z",
+    "balance": {
+      "date": "2024-02-24T18:56:56.495Z",
+      "amount": "3506.93"
+    }
+  },
+  {
+    "id": "1cc4917a-cab0-4807-9c45-87448046427b",
+    "name": "Home Depot",
+    "minimumDue": "29",
+    "dueDay": "6",
+    "creditLimit": "10000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "7542",
+    "billType": "Credit Card",
+    "website": "https://homedepot.com/mycard",
+    "billerId": "4590c97e-210a-4fdd-beb2-f4a91c0d4053",
+    "updated": "2024-02-24T20:48:10.441Z",
+    "balance": {
+      "date": "2024-02-24T20:48:10.441Z",
+      "amount": "524.73"
+    }
+  },
+  {
+    "id": "4bc80665-7702-476c-9fd2-d78bec9d5ef1",
+    "name": "Lowes (Mike)",
+    "minimumDue": "500",
+    "dueDay": "21",
+    "creditLimit": "35000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "4863",
+    "billType": "Credit Card",
+    "website": "https://lowes.syf.com/login/",
+    "billerId": "2149d5b2-9d61-4fbe-a263-073c7a2a8218",
+    "updated": "2024-02-24T20:19:36.097Z",
+    "balance": {
+      "date": "2024-02-24T20:19:36.097Z",
+      "amount": "0"
+    }
+  },
+  {
+    "id": "c4434b6d-b8b5-4909-973b-ead6ac23ebcc",
+    "name": "Sam's Club",
+    "minimumDue": "114",
+    "dueDay": "23",
+    "creditLimit": "10000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "9509",
+    "billType": "Credit Card",
+    "website": "https://samsclub.syf.com/login/",
+    "billerId": "35c0aedd-3ac2-43cf-9f70-69b0dd546e3c",
+    "updated": "2024-02-24T20:20:58.584Z",
+    "balance": {
+      "date": "2024-02-24T20:20:58.584Z",
+      "amount": "3766.35"
+    }
+  },
+  {
+    "id": "e710a14b-7494-4885-bd3a-9e2516000e7d",
+    "name": "Havertys (Mike)",
+    "minimumDue": "148.00",
+    "dueDay": "6",
+    "creditLimit": "20000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": null,
+    "billType": "Credit Card",
+    "website": "https://www.mysynchrony.com/cmp-index.html?market=homefurnishings&store=havertys",
     "billerId": "3934f137-b3bb-44b8-898a-7a1892b69fd6",
-    "billType": "Credit Card"
+    "updated": "2024-02-24T20:25:46.832Z",
+    "balance": {
+      "date": "2024-02-24T20:25:46.832Z",
+      "amount": "1817.69"
+    }
+  },
+  {
+    "id": "78e8736b-f6e7-4d43-a41f-319fcc02d95d",
+    "name": "Havertys (Shawn)",
+    "minimumDue": "188.00",
+    "dueDay": "19",
+    "creditLimit": "20000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "9892",
+    "billType": "Credit Card",
+    "website": "https://www.synchrony.com/accounts/",
+    "billerId": "3934f137-b3bb-44b8-898a-7a1892b69fd6",
+    "updated": "2024-02-24T20:30:00.877Z",
+    "balance": {
+      "date": "2024-02-24T20:30:00.877Z",
+      "amount": "9861.51"
+    }
   },
   {
     "id": "9cb6b2b4-0db1-4691-8515-bf739f2b6fe1",
     "name": "Belk",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "17",
-    "creditLimit": "8000.00",
+    "creditLimit": "1024.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "3375",
     "billType": "Credit Card",
-    "billerId": "416f17ac-1a24-4f7e-b1d0-c56a0919755c"
+    "website": "https://belk.syf.com/",
+    "billerId": "416f17ac-1a24-4f7e-b1d0-c56a0919755c",
+    "updated": "2024-02-24T20:23:19.712Z",
+    "balance": {
+      "date": "2024-02-24T20:23:19.712Z",
+      "amount": "0"
+    }
   },
   {
     "id": "a9aa76fc-fed3-462b-b640-54ef9f412a44",
     "name": "Kohls",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "3",
     "creditLimit": "3000.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "3403",
     "billType": "Credit Card",
-    "billerId": "68b162b2-2234-4167-8e56-25418c392bfa"
+    "website": "https://credit.kohls.com/eCustService/",
+    "billerId": "68b162b2-2234-4167-8e56-25418c392bfa",
+    "updated": "2024-02-24T20:52:17.723Z",
+    "balance": {
+      "date": "2024-02-24T20:52:17.723Z",
+      "amount": "0"
+    }
   },
   {
     "id": "f7d9ef54-b63b-4d60-be26-dd80560d3c4a",
     "name": "Mike's Capitol One",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "12",
     "creditLimit": "0",
@@ -117,112 +181,384 @@
   },
   {
     "id": "e3d5abe1-ada3-4d3e-b300-c6fa57cfac4a",
-    "name": "Mike's Quicksilver",
-    "balance": "597.46",
-    "minimumDue": "0",
+    "name": "Quicksilver (Mike)",
+    "minimumDue": "105",
     "dueDay": "12",
     "creditLimit": "5000.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "6199",
     "billType": "Credit Card",
-    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd"
+    "website": null,
+    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+    "updated": "2024-02-24T20:52:47.824Z",
+    "balance": {
+      "date": "2024-02-24T20:52:47.824Z",
+      "amount": "3329.16"
+    }
   },
   {
     "id": "a7aa178b-8e81-4001-ad17-bb491842fabb",
-    "name": "Shawn's Quicksilver",
-    "balance": "530",
-    "minimumDue": "530",
+    "name": "Quicksilver (Shawn)",
+    "minimumDue": "0",
     "dueDay": "12",
     "creditLimit": "3500.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "1918",
     "billType": "Credit Card",
-    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd"
+    "website": null,
+    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+    "updated": "2024-02-24T20:54:18.864Z",
+    "balance": {
+      "date": "2024-02-24T20:54:18.864Z",
+      "amount": "0"
+    }
   },
   {
     "id": "46deb387-1a1b-4c24-90b9-2f7ba35bcdcb",
     "name": "Target",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "8",
-    "creditLimit": "12000.00",
+    "creditLimit": "12500",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "1972",
     "billType": "Credit Card",
-    "billerId": "ee1a2a5d-c847-4b3f-92d4-b5a2f73631f3"
+    "website": "https://rcam.target.com/Secure",
+    "billerId": "ee1a2a5d-c847-4b3f-92d4-b5a2f73631f3",
+    "updated": "2024-02-24T20:56:16.056Z",
+    "balance": {
+      "date": "2024-02-24T20:56:16.056Z",
+      "amount": "0"
+    }
   },
   {
     "id": "8d26b662-b1ca-471f-a833-706718b1803c",
-    "name": "Shawn's Amazon",
-    "balance": "0",
+    "name": "Amazon (Mike)",
     "minimumDue": "0",
     "dueDay": "15",
-    "creditLimit": "10000.00",
+    "creditLimit": "1024.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "8663",
     "billType": "Credit Card",
-    "billerId": "6abcaebc-7166-4f85-9559-6cf744c909d4"
+    "website": null,
+    "billerId": "6abcaebc-7166-4f85-9559-6cf744c909d4",
+    "updated": "2024-02-24T20:32:07.781Z",
+    "balance": {
+      "date": "2024-02-24T20:32:07.781Z",
+      "amount": "0"
+    }
   },
   {
     "id": "b55c8549-36e5-4d39-96c4-8d3ec3099ff9",
-    "name": "Shawn's Amazon",
-    "balance": "0",
+    "name": "Amazon (Shawn)",
     "minimumDue": "0",
     "dueDay": "18",
     "creditLimit": "10000.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "1481",
     "billType": "Credit Card",
-    "billerId": "6abcaebc-7166-4f85-9559-6cf744c909d4"
+    "website": null,
+    "billerId": "6abcaebc-7166-4f85-9559-6cf744c909d4",
+    "updated": "2024-02-24T20:30:28.627Z",
+    "balance": {
+      "date": "2024-02-24T20:30:28.627Z",
+      "amount": "0"
+    }
   },
   {
     "id": "583d8d34-bbaa-44e4-873c-78f41eac9a21",
     "name": "TJ Max",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "7",
     "creditLimit": "10000.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "3642",
     "billType": "Credit Card",
-    "billerId": "f26dfb02-261e-4ad3-b2b2-2513d832f6ae"
+    "website": "https://tjx.syf.com/login/",
+    "billerId": "f26dfb02-261e-4ad3-b2b2-2513d832f6ae",
+    "updated": "2024-02-24T20:22:14.523Z",
+    "balance": {
+      "date": "2024-02-24T20:22:14.523Z",
+      "amount": "0"
+    }
   },
   {
     "id": "bce6726a-14e0-4575-a46a-50faa7bf6dd7",
     "name": "Care Credit",
-    "balance": "0",
     "minimumDue": "0",
     "dueDay": "21",
-    "creditLimit": "20000.00",
+    "creditLimit": "1024",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "5424",
     "billType": "Credit Card",
-    "billerId": "dc0ee261-d5cc-421c-9fb6-87673eb48e23"
+    "website": "https://www.mysynchrony.com/",
+    "billerId": "dc0ee261-d5cc-421c-9fb6-87673eb48e23",
+    "updated": "2024-02-24T20:26:49.098Z",
+    "balance": {
+      "date": "2024-02-24T20:26:49.098Z",
+      "amount": "0"
+    }
   },
   {
     "id": "59809f88-08bc-4db4-af6d-dfec0e84a510",
-    "name": "Mike's Best Buy",
-    "balance": "3217.00",
+    "name": "Best Buy (Mike)",
     "minimumDue": "150.00",
     "dueDay": "11",
     "creditLimit": "10000.00",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "7496",
     "billType": "Credit Card",
-    "billerId": "ea16a9c2-d6ae-480b-970a-61285a1ab934"
+    "website": "https://citiretailservices.citibankonline.com/",
+    "billerId": "ea16a9c2-d6ae-480b-970a-61285a1ab934",
+    "updated": "2024-02-24T21:02:14.009Z",
+    "balance": {
+      "date": "2024-02-24T21:02:14.009Z",
+      "amount": "517.49"
+    }
   },
   {
     "id": "b5aacbc4-8f20-44ac-8d7d-e8feb3264917",
     "name": "Shawn's Best buy",
-    "balance": "0",
-    "minimumDue": "0",
+    "minimumDue": "200",
     "dueDay": "11",
-    "creditLimit": "2000.00",
+    "creditLimit": "3000",
+    "userId": null,
     "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "7147",
     "billType": "Credit Card",
-    "billerId": "ea16a9c2-d6ae-480b-970a-61285a1ab934"
+    "website": "https://citiretailservices.citibankonline.com/",
+    "billerId": "ea16a9c2-d6ae-480b-970a-61285a1ab934",
+    "updated": "2024-02-24T20:59:41.898Z",
+    "balance": {
+      "date": "2024-02-24T20:59:41.898Z",
+      "amount": "2187.28"
+    }
   },
   {
     "id": "f5b651df-9ee2-4519-a32d-66adf3b3738e",
     "name": "Mortgage",
-    "balance": "466798.49",
     "minimumDue": "2815.12",
     "dueDay": "1",
     "creditLimit": "",
     "autoPay": false,
     "billType": "Mortgage",
     "billerId": "9b735fe9-f9f8-4f3e-80b0-79effe51a6b7"
+  },
+  {
+    "id": "dcb008d4-8c39-4877-a521-324214e3afa4",
+    "name": "Mike's REI",
+    "minimumDue": "29.00",
+    "dueDay": "20",
+    "creditLimit": "15000.00",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "5933",
+    "billType": "Credit Card",
+    "website": null,
+    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+    "updated": "2024-02-24T19:52:27.606Z",
+    "balance": {
+      "date": "2024-02-24T19:52:27.606Z",
+      "amount": "180.57"
+    }
+  },
+  {
+    "id": "6dead7b3-8fb5-4f84-8b26-511887f8112d",
+    "name": "Pottery Barn (Mike)",
+    "balance": {
+      "id": "6dead7b3-8fb5-4f84-8b26-511887f8112d",
+      "date": "2024-02-24T19:54:12.379Z",
+      "amount": 277.77
+    },
+    "minimumDue": "29.00",
+    "dueDay": "3",
+    "creditLimit": "7500",
+    "autoPay": true,
+    "accountNumber": "3188",
+    "billType": "Credit Card",
+    "biller": {
+      "id": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+      "name": "Capitol One"
+    },
+    "billerId": "8c62d7f0-62be-4157-8dc8-cd1705ccacfd",
+    "updated": "2024-02-24T19:54:12.379Z"
+  },
+  {
+    "id": "e19dc913-7d97-4e7d-bfd6-713869021ceb",
+    "name": "American Express (Mike)",
+    "balance": {
+      "id": "e19dc913-7d97-4e7d-bfd6-713869021ceb",
+      "date": "2024-02-24T21:43:07.644Z",
+      "amount": 438.96
+    },
+    "minimumDue": "35.00",
+    "dueDay": "13",
+    "creditLimit": "23000",
+    "autoPay": true,
+    "accountNumber": "81002",
+    "billType": "Credit Card",
+    "biller": {
+      "id": "10f91dc2-a5f1-4456-98f9-bb583dfe5764",
+      "name": "American Express"
+    },
+    "website": "https://global.americanexpress.com/",
+    "billerId": "10f91dc2-a5f1-4456-98f9-bb583dfe5764",
+    "updated": "2024-02-24T21:43:07.644Z"
+  },
+  {
+    "id": "6ac19f73-6f5e-496d-bf2e-6d0231906a56",
+    "name": "American Express (Shawn)",
+    "balance": {
+      "id": "6ac19f73-6f5e-496d-bf2e-6d0231906a56",
+      "date": "2024-02-24T21:45:29.563Z",
+      "amount": 4140.04
+    },
+    "minimumDue": "129.00",
+    "dueDay": "28",
+    "creditLimit": "25000",
+    "autoPay": true,
+    "accountNumber": "31006",
+    "billType": "Credit Card",
+    "biller": {
+      "id": "10f91dc2-a5f1-4456-98f9-bb583dfe5764",
+      "name": "American Express"
+    },
+    "website": "https://global.americanexpress.com/",
+    "billerId": "10f91dc2-a5f1-4456-98f9-bb583dfe5764",
+    "updated": "2024-02-24T21:45:29.563Z"
+  },
+  {
+    "id": "6106e0fb-bc22-4776-a407-010493e38b7a",
+    "name": "Discover (Shawn)",
+    "minimumDue": "241.00",
+    "dueDay": "12",
+    "creditLimit": "19000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "7455",
+    "billType": "Credit Card",
+    "website": "https://card.discover.com/",
+    "billerId": "38e90637-f22c-4be7-ac19-f5918ccc7d4c",
+    "updated": "2024-02-24T21:55:20.894Z",
+    "balance": {
+      "date": "2024-02-24T21:55:20.894Z",
+      "amount": "12036"
+    }
+  },
+  {
+    "id": "8232cfed-b76e-43a2-b0a6-512646c1880b",
+    "name": "Discover (Mike)",
+    "minimumDue": "226.00",
+    "dueDay": "12",
+    "creditLimit": "18000",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "8191",
+    "billType": "Credit Card",
+    "website": "https://card.discover.com/",
+    "billerId": "38e90637-f22c-4be7-ac19-f5918ccc7d4c",
+    "updated": "2024-02-24T21:54:33.599Z",
+    "balance": {
+      "date": "2024-02-24T21:54:33.599Z",
+      "amount": "11283.5"
+    }
+  },
+  {
+    "id": "368d262f-6ea8-41fb-8abd-a1f3f6abdb71",
+    "name": "XBox Citizens Pay",
+    "balance": {
+      "id": "368d262f-6ea8-41fb-8abd-a1f3f6abdb71",
+      "date": "2024-02-24T22:12:01.971Z",
+      "amount": 150.05
+    },
+    "minimumDue": "37.53",
+    "dueDay": "1",
+    "creditLimit": "800",
+    "autoPay": true,
+    "accountNumber": "0704",
+    "billType": "Credit Card",
+    "biller": {
+      "id": "93e03185-3c1b-412e-a0d7-19034005b188",
+      "name": "Citizens Pay"
+    },
+    "website": "http://www.service.citizensone.com/",
+    "billerId": "93e03185-3c1b-412e-a0d7-19034005b188",
+    "updated": "2024-02-24T22:12:01.971Z"
+  },
+  {
+    "id": "98d18cbf-d505-427d-b889-e395cd081e53",
+    "name": "Apple",
+    "balance": {
+      "id": "98d18cbf-d505-427d-b889-e395cd081e53",
+      "date": "2024-02-24T22:17:17.352Z",
+      "amount": 0
+    },
+    "minimumDue": "0",
+    "dueDay": "",
+    "creditLimit": "3000",
+    "autoPay": true,
+    "billType": "Credit Card",
+    "biller": {
+      "id": "688e17a4-0b24-438e-b97d-bcf903e0e111",
+      "name": "Apple Card"
+    },
+    "website": "https://card.apple.com/",
+    "billerId": "688e17a4-0b24-438e-b97d-bcf903e0e111",
+    "updated": "2024-02-24T22:17:17.352Z"
+  },
+  {
+    "id": "b92a86d1-cb1c-4e68-8c58-1d9e3acc9215",
+    "name": "Apple iCloud",
+    "balance": {
+      "id": "b92a86d1-cb1c-4e68-8c58-1d9e3acc9215",
+      "date": "2024-02-24T22:28:55.458Z",
+      "amount": 0
+    },
+    "minimumDue": "2.99",
+    "dueDay": "24",
+    "creditLimit": "",
+    "autoPay": true,
+    "billType": "Services",
+    "biller": {
+      "id": "bb4e7de9-7f2c-4273-83a3-f92a546f51ac",
+      "name": "Apple"
+    },
+    "website": "https://www.icloud.com/",
+    "billerId": "bb4e7de9-7f2c-4273-83a3-f92a546f51ac",
+    "updated": "2024-02-24T22:28:55.458Z"
+  },
+  {
+    "id": "b5ec2fdb-aec5-48fc-9673-412d43ff3f70",
+    "name": "Verizon Wireless",
+    "minimumDue": "426.68",
+    "dueDay": "2",
+    "creditLimit": "",
+    "userId": null,
+    "autoPay": true,
+    "autoPayType": null,
+    "accountNumber": "9466",
+    "billType": "Services",
+    "website": "https://www.verizon.com/",
+    "billerId": "40c2db27-9b90-401b-8591-8b4cb65b692e",
+    "updated": "2024-02-24T22:40:09.698Z"
   }
 ]

@@ -24,6 +24,7 @@ export const BillerForm = () => {
     : {
         name: '',
         website: '',
+        image: 'default.png',
       }
 
   const {
@@ -59,7 +60,7 @@ export const BillerForm = () => {
           paddingBottom: 0,
         }}
       >
-        <h3>Error!</h3>
+        <h3>Biller Form Error!</h3>
         <p style={{ width: 400 }}>{error.message}</p>
         <Button onClick={() => resetAddBiller()}>Try Again</Button>
       </div>
@@ -72,7 +73,7 @@ export const BillerForm = () => {
         <TextInput name="website" label="WebSite" control={control} />
       </div>
       <div className="col-6">
-        <img src={`/images/${selected.image}`} alt={'image_' + selected.id} />
+        <img src={`/images/${selected?.image}`} alt={'image_' + selected?.id} />
       </div>
       <div className="p-dialog-footer pb-0 pt-5 pr-0">
         <Button className="p-button-text" onClick={() => dialogVisibleVar(false)}>

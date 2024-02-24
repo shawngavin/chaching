@@ -26,7 +26,7 @@ export const BillForm = () => {
     }
   }, [listData])
 
-  const defaultValues = selected ? selected : { name: '', billType: '', billerId: null, balance: '', minimumDue: '', dueDay: '', creditLimit: '', autoPay: true }
+  const defaultValues = selected ? selected : { name: '', billType: '', biller: null, balance: '', minimumDue: '', dueDay: '', creditLimit: '', autoPay: true }
 
   const {
     control,
@@ -36,12 +36,24 @@ export const BillForm = () => {
   } = useForm({ defaultValues })
 
   const parseSaveData = data => {
-    return Object.fromEntries(
-      Object.keys(data).reduce((result, key) => {
-        result.push(data[key] && typeof data[key] === 'object' ? [key, data[key].id] : [key, data[key]])
-        return result
-      }, [])
-    )
+    console.log('parseSaveData', data)
+    const result = {
+      //id: data.id,
+      name: data.name,
+      balance: { amount: data.balance.amount },
+      minimumDue: data.minimumDue,
+      dueDay: data.dueDay,
+      creditLimit: data.creditLimit,
+      userId: data.userId,
+      autoPay: data.autoPay,
+      autoPayType: data.autoPayType,
+      accountNumber: data.accountNumber,
+      // billerId: data.biller.id,
+      biller: { id: data.biller?.id ?? null, name: data.biller?.name ?? data.biller, image: data.biller.image, website: data.biller.website },
+      billType: data.billType,
+      website: data.website,
+    }
+    return Object.assign({}, result, data.id ? { id: data.id } : {})
   }
 
   const onSubmit = data => {
@@ -55,7 +67,8 @@ export const BillForm = () => {
     //dialogVisibleVar(false)
   }
 
-  if (addBillError)
+  if (addBillError) {
+    console.log('addBillError', addBillError)
     return (
       <div
         className="p-card  text-center surface-600 bg-purple-50"
@@ -65,15 +78,16 @@ export const BillForm = () => {
           paddingBottom: 0,
         }}
       >
-        <h3>Error!</h3>
+        <h3>Bill Form Error!</h3>
         <p style={{ width: 400 }}>{addBillError.message}</p>
         <Button onClick={() => addBillReset()}>Try Again</Button>
       </div>
     )
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="p-fluid">
-      <div className="grid">
+      <div className="formgrid grid">
         <div className="col-4">
           <TextInput name="name" label="Bill Name" control={control} rules={{ required: "'Bill Name' is required!" }} autofocus />
         </div>
@@ -82,26 +96,25 @@ export const BillForm = () => {
         </div>
         <div className="col-4">
           <AutoComplete
-            name="billerId"
+            name="biller"
             label="Biller"
             control={control}
             suggestions={billers?.filter(f => f.name.toLowerCase().includes(billerQuery))}
             completeMethod={e => setBillerQuery(e.query)}
             dropdown
-            forceSelection
             field="name"
           />
         </div>
       </div>
       <div className="grid">
         <div className="col-4">
-          <TextInput name="balance" label="Balance" control={control} />
-        </div>
-        <div className="col-4">
           <TextInput name="minimumDue" label="Minimum Due" control={control} />
         </div>
         <div className="col-4">
           <TextInput name="dueDay" label="Day Due" control={control} />
+        </div>
+        <div className="col-4">
+          <TextInput name="accountNumber" label="Account Number" control={control} />
         </div>
       </div>
       <div className="grid">
@@ -109,10 +122,26 @@ export const BillForm = () => {
           <TextInput name="creditLimit" label="Credit Limit" control={control} />
         </div>
         <div className="col-4">
-          <TextInput name="balance" label="Balance" control={control} />
+          <TextInput name="balance.amount" label="Balance" control={control} />
         </div>
         <div className="col-4">
           <ToggleButton name="autoPay" label="Auto Pay" control={control} />
+        </div>
+      </div>
+      <div className="grid">
+        <div className="col-11">
+          <TextInput name="website" label="Website" control={control} />
+        </div>
+        <div className="col-1 grid">
+          <Button
+            icon="pi pi-external-link"
+            className="p-button-text"
+            onClick={e => {
+              e.preventDefault()
+              window.open(selected.website, selected.id)
+            }}
+            disabled={!selected?.website}
+          />
         </div>
       </div>
       <div className="p-dialog-footer pb-0 pt-5 pr-0">

@@ -147,5 +147,30 @@
     "name": "PENNYMAC",
     "website": "https://mypennymac.pennymacusa.com/",
     "image": ""
+  },
+  {
+    "id": "10f91dc2-a5f1-4456-98f9-bb583dfe5764",
+    "name": "American Express",
+    "website": "https://global.americanexpress.com/"
+  },
+  {
+    "id": "38e90637-f22c-4be7-ac19-f5918ccc7d4c",
+    "name": "Discover",
+    "website": "https://card.discover.com/"
+  },
+  {
+    "id": "93e03185-3c1b-412e-a0d7-19034005b188",
+    "name": "Citizens Pay",
+    "website": "http://www.service.citizensone.com/"
+  },
+  {
+    "id": "688e17a4-0b24-438e-b97d-bcf903e0e111",
+    "name": "Apple Card",
+    "website": "https://card.apple.com/"
+  },
+  {
+    "id": "bb4e7de9-7f2c-4273-83a3-f92a546f51ac",
+    "name": "Apple",
+    "website": ""
   }
 ]

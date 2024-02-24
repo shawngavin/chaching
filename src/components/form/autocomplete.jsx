@@ -12,7 +12,7 @@ export const AutoComplete = ({ name, rules, control, label, helperText, suggesti
       render={({ field, fieldState }) => {
         return (
           <div className="field">
-            <label htmlFor="username1" className="block">
+            <label htmlFor={field.name} className="block">
               {label}
             </label>
             <ErrorIcon fieldState={fieldState}>
